@@ -45,13 +45,6 @@ body, html {
   
   background-color: gray;
 }
-
-/* h1,h2,h3,p,ul,li,div,table,th,td,a,label{
-  color: whitesmoke;
-  text-align: center;
-  font-family: sans-serif;
-  
-} */
 h2,h3,h4{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
@@ -175,6 +168,7 @@ h1{
 #recs-box{
   display: none;
 }
+
 
 /* -----Table----- */
 /* Display  = none (hiding event table for now) */
@@ -429,7 +423,8 @@ margin-top: 30px;
 }
 
 #underPic3{
-  border: 10px solid green;
+  text-decoration: none;
+  /* border: 10px solid green; */
   background: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
   padding: 0px;
@@ -444,21 +439,24 @@ margin-top: 30px;
   font-size: 20px;
   padding: 0px;
   margin-top: 20px;
-  border: solid red 5px;
+  /* border: solid red 5px; */
   
 }
+
 .linkList{
   list-style-type: none;
   margin: auto;
   margin-top: 30px;
   margin-bottom: 10px;
-}
-.linkList li a{
+}.linkList li a{
   
   display: block;
-  text-align: left
+  text-align: left;
+  color: white;
   
 }
+
+
 .hobbyList{
 
   display: block; 
@@ -469,6 +467,12 @@ margin-top: 30px;
 }
 .hobbyList li{
   text-align: left;
+}
+
+/* Light mode: links become black */
+/* Only when body is light mode change the link list to black  */
+body.light-mode .linkList a {
+  color: black;
 }
 
 /* ---Contact input box--- */

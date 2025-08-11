@@ -1,12 +1,24 @@
-// nav bar Toggle button 
+//Short cuts: 
+// turning the html collection in to js array and then loop through elements and add class  
+// Array.from(linkList).forEach(el => el.classList.add('linkList-light'));
 
+//short cut end -------------------
+
+
+
+
+
+// nav bar Toggle button 
 const toggleLight=document.getElementById("navbutton");
 const body = document.body;
+
+
 
 // Check for saved theme preference on page load
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme === 'light') {
-    body.classList.add('light-mode');  
+    body.classList.add('light-mode'); 
+   
 }
 //function
 toggleLight.addEventListener('click', () => {
@@ -20,13 +32,6 @@ toggleLight.addEventListener('click', () => {
     localStorage.setItem('theme', 'dark'); // Or remove the item entirely
     }
 });
-
-
-
-
-
-
-
 
 
 
