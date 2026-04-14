@@ -328,30 +328,45 @@ table{
 
 
 
-/* ----------Gallery page ---------- */
+/*Gallery page====================================== */
 .gallery-row{
-  /* originally flex*/
-  display: none; 
+  display: flex; 
   justify-content: center;
-  border: solid 5px red;
+  /* border: solid 5px red; */
   align-items: start;
+  
 
 
 }
 .gallery-box{
   margin: 5px;
-  border: 1px solid #ccc;
+  /* border: 1px solid blue;    */
   float: left;
-  width: 250px;
+  width: 300px;   /* or whatever size you want */
+  height: 400px;
+  overflow: hidden;
+  
+  background: rgba(0, 0, 0, 0.7); /* semi-transparent black */
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  
 
 }
 .gallery-box:hover {
   border: 1px solid #777;
+  transform: scale(1.1);
 }
 
 div.gallery-box img {
-  width: 100%;
-  height: auto;
+  
+  /* border: 1px solid #ccc; */
+  width: 100%; /* Set desired width */
+  height: 80%; /* Set desired height */
+  object-fit: contain; /* Ensures the image fills the container */
+   background-color: black;   /* blends into container */
+  
+  
+  
 }
 
 div.desc {
@@ -599,31 +614,37 @@ input[type="submit"]{
 
 
 /*--- Rsvp box---*/
+#RSVP-container{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  justify-self: center;
+  background: rgba(0, 0, 0, 0.7); /* semi-transparent black */
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
 #RSVP-box{
   display: flex;
   flex-direction: row;
-  justify-content: center;
-
+  justify-content: space-around;
 }
 #RSVP-box li{
   text-align: left;
+  list-style-type: none; 
 
 }
 #RSVP-para{
   width: 40%;
-
+  word-spacing: 0.1em;   /* Relative to current font size */
 }
 
 #RSVP-event1{
-  flex-direction: column;
   width: 15%;
 }
 #RSVP-event2{
-  flex-direction: column;
   width: 15%;
 }
 #RSVP-event3{
-  flex-direction: column;
   width: 15%;
 }
 
